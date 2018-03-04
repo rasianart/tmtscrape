@@ -5,7 +5,7 @@ var request = require('request');
 var cheerio = require('cheerio');
 var bodyParser = require('body-parser');
 
-var port = process.env.PORT || 8080;
+var PORT = process.env.PORT || 8080;
 
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
@@ -52,4 +52,4 @@ app.get('/data', (req, res) => {
   });
 })
 
-app.listen(8080, () => console.log('Example app listening on port 8080!'))
+app.listen(PORT, () => console.log('Example app listening on port 8080!'))
